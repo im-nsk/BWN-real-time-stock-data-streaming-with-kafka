@@ -13,3 +13,6 @@ Run Server:
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
 C:\major-project\kafka\bin
+
+
+....continue
