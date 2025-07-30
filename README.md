@@ -24,13 +24,15 @@ This project simulates **real-time stock price data streaming** using **Apache K
 
 ```
 01-stock-data-streaming-kafka/
-├── producer.py                  # Streams stock data to Kafka
-├── consumer.py                  # Consumes Kafka messages and writes to S3
-├── utils/
-│   └── config_loader.py         # Loads config from JSON
+scripts/
+│   └── producer.py                  # Streams stock data to Kafka
+│   └── consumer.py                  # Consumes Kafka messages and writes to S3
+│   └── utils/
+│     └── config_loader.py         # Loads config from JSON
 ├── config/
-│   └── config.json              # API, Kafka, and AWS configurations
+│   └── app_config.yaml              # API, Kafka, and AWS configurations
 └── README.md                    # Project documentation
+└── .env                     # Credential
 ```
 
 ---
