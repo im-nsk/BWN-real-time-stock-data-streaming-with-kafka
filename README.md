@@ -28,11 +28,11 @@ scripts/
 │   └── producer.py                  # Streams stock data to Kafka
 │   └── consumer.py                  # Consumes Kafka messages and writes to S3
 │   └── utils/
-│     └── config_loader.py         # Loads config from JSON
+│     └── config_loader.py           # Loads config from JSON
 ├── config/
 │   └── app_config.yaml              # API, Kafka, and AWS configurations
-└── README.md                    # Project documentation
-└── .env                     # Credential
+└── README.md                        # Project documentation
+└── .env                             # Credential
 ```
 
 ---
