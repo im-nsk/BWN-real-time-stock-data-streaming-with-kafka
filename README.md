@@ -39,29 +39,7 @@ scripts/
 
 ## ⚙️ Configuration
 
-All parameters are handled through `config/config.json`. Example:
-
-```json
-{
-  "api": {
-    "base_url": "https://www.alphavantage.co/query?",
-    "api_key": "your_api_key",
-    "symbols": ["AAPL", "MSFT"],
-    "interval": "5min"
-  },
-  "kafka": {
-    "bootstrap_server": "localhost:9092",
-    "kafka_topic": "stock-prices"
-  },
-  "aws": {
-    "access_key_id": "your_key",
-    "secret_access_key": "your_secret",
-    "region": "ap-south-1",
-    "s3_src_bucket": "stock-data-bucket",
-    "s3_src_prefix": "stream/"
-  }
-}
-```
+All parameters are handled through `config/app_config.yaml`.
 
 ---
 
@@ -71,7 +49,7 @@ All parameters are handled through `config/config.json`. Example:
 
 - Builds API URL for each stock symbol
 - Fetches intraday stock data using Alpha Vantage API
-- Sends JSON response to Kafka topic: `stock-prices`
+- Sends JSON response to Kafka topic: `stock-data-stream`
 - Limits to 2 batches per symbol (for testing/demo)
 - Sends one record every 30 seconds
 
@@ -83,7 +61,7 @@ All parameters are handled through `config/config.json`. Example:
 
 **What it does:**
 
-- Listens to `stock-prices` Kafka topic
+- Listens to `stock-data-stream` Kafka topic
 - Buffers records up to 1000 messages
 - Converts the batch to a Parquet file using PyArrow
 - Uploads to AWS S3 (`stock_batch_<id>_<timestamp>.parquet`)
@@ -93,12 +71,12 @@ All parameters are handled through `config/config.json`. Example:
 ## 📁 Sample Output Structure in S3
 
 ```
-s3://stock-data-bucket/stream/stock_batch_1_1722243172.parquet
+s3://<bucket-name>/intraday_data/stock_batch_1_1722243172.parquet
 ```
 
 ---
 
-## 🥺 Sample Data Format (from Producer)
+## 🗃️Sample Data Format (from Producer)
 
 ```json
 {
@@ -132,7 +110,7 @@ s3://stock-data-bucket/stream/stock_batch_1_1722243172.parquet
     ```
 - Create the Kafka topic:
   ```bash
-  bin/kafka-topics.sh --create --topic stock-prices --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+  bin/kafka-topics.sh --create --topic stock-data-stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
   ```
 - Python 3.x environment
 - Install dependencies:
