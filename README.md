@@ -1,6 +1,6 @@
 # 📈 Real-Time Stock Data Streaming with Kafka & AWS Cloud
 
-> This is part of the **BWN Project Series — Build With Nishant**, where I build real-world data engineering projects from scratch and share insight step-by-step.
+> 📌 This is part of the **BWN Project Series — Build With Nishant**, where I build real-world data engineering projects from scratch and share insight step-by-step.
 
 ---
 
@@ -23,37 +23,28 @@ This diagram illustrates the end-to-end flow of the real-time stock data process
 - **Language:** Python
 - **Streaming Platform:** Apache Kafka (Local)
 - **Cloud Storage:** AWS S3
-- **Libraries:**
-  - `kafka-python`
-  - `requests`
-  - `boto3`
-  - `pandas`
-  - `pyarrow`
-
-    
+ 
  ---
  
 ## 📦 Libraries Used
 
 Below are the key libraries and packages used in this project:
 
-| Library            | Purpose                                                                 |
-|--------------------|-------------------------------------------------------------------------|
-| `kafka-python`     | To produce and consume messages from Kafka topics                      |
-| `requests`         | (Optional) For making HTTP requests if needed for APIs or services      |
-| `boto3`            | To interact with AWS services like S3                                   |
-| `pandas`           | For efficient data manipulation and transformation                      |
-| `pyarrow`          | For handling columnar data and Parquet file format                      |
-| `pyarrow.parquet`  | To read/write Parquet files                                             |
-| `json`             | For working with JSON data structures                                   |
-| `time`             | To manage timestamps and delays                                         |
-| `io`               | For working with in-memory byte streams (e.g., `BytesIO`)              |
-| `utils.config_loader` | Custom module to load project-specific configurations (YAML/JSON)    |
-
----
-
-📌 *This project is part of the `BWN` (Build With NSK) series — where I build real-world Data Engineering projects from scratch to production-ready systems.*
-
+| Library                  | Purpose                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| `kafka-python`           | To produce and consume messages from Kafka topics                      |
+| `requests`               | (Optional) For making HTTP requests if needed for APIs or services      |
+| `boto3`                  | To interact with AWS services like S3                                   |
+| `pandas`                 | For efficient data manipulation and transformation                      |
+| `pyarrow`                | For handling columnar data structures and memory-efficient tables       |
+| `pyarrow.parquet`        | To read/write Parquet files                                             |
+| `json`                   | For parsing and generating JSON data                                    |
+| `time`                   | To manage timestamps and execution delays                               |
+| `io`                     | For handling in-memory file-like objects (e.g., `BytesIO`)              |
+| `yaml`                   | To read and parse YAML configuration files                              |
+| `os`                     | For interacting with the operating system (env vars, paths, etc.)       |
+| `dotenv` (`python-dotenv`)| To load environment variables from `.env` files                         |
+| `utils.config_loader`    | Custom module to load project-specific configurations (YAML/JSON)       |
 
 ---
 
