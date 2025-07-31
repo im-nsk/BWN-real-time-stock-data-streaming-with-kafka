@@ -33,7 +33,7 @@ Below are the key libraries and packages used in this project:
 | Library                  | Purpose                                                                 |
 |--------------------------|-------------------------------------------------------------------------|
 | `kafka-python`           | To produce and consume messages from Kafka topics                      |
-| `requests`               | (Optional) For making HTTP requests if needed for APIs or services      |
+| `requests`               | For making HTTP requests if needed for APIs or services      |
 | `boto3`                  | To interact with AWS services like S3                                   |
 | `pandas`                 | For efficient data manipulation and transformation                      |
 | `pyarrow`                | For handling columnar data structures and memory-efficient tables       |
@@ -63,6 +63,7 @@ scripts/
 │   └── app_config.yaml              # API, Kafka, and AWS configurations
 └── README.md                        # Project documentation
 └── .env                             # Credential
+└── .gitignore                       # To ignore credential file 
 ```
 
 ---
@@ -142,11 +143,6 @@ s3://<bucket-name>/intraday_data/stock_batch_1_1722243172.parquet
   ```bash
   bin/kafka-topics.sh --create --topic stock-data-stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
   ```
-- Python 3.x environment
-- Install dependencies:
-  ```bash
-  pip install kafka-python boto3 requests pandas pyarrow
-  ```
 
 ### 🏃 Run the Producer
 
@@ -161,14 +157,27 @@ python consumer.py
 ```
 
 ---
+## 🧠 What You'll Learn from This Project
 
-## 🧐 Notes & Learnings
+This project is designed to give you hands-on, real-world exposure to the core components of a modern data pipeline. Here’s what you’ll learn
 
-- Shows how to implement a real-time pipeline using Kafka
-- Hands-on with streaming, batch buffering, and cloud storage
-- PyArrow is used for efficient Parquet writing in-memory
+- 📦 **Kafka Basics**: Learn how Apache Kafka works, including setting up a local Kafka environment.
+- 🔁 **Producer-Consumer Flow**: Understand how to publish and consume messages using `kafka-python`.
+- 🌐 **Fetching APIs**: Use the `requests` library to collect real-time data.
+- 🧹 **Pandas Fundamentals**: Perform data cleaning and manipulation using `pandas`.
+- 📁 **Working with Parquet**: Learn how to handle Parquet files using `pyarrow` and `pandas`.
+- 🔐 **Managing Secrets**: Securely store and access credentials using `dotenv` and environment variables.
+- ☁️ **AWS Integration**: Connect your local pipeline with AWS services using `boto3`.
+- 📤 **Kafka to AWS Flow**: Understand the end-to-end flow of ingesting data from Kafka and loading it into AWS.
+> Perfect for beginners to intermediate data engineers looking to build a real-world data ingestion pipeline.
 
 ---
+
+## ✨ Key Highlights
+
+- ⚡ **Real-Time Pipeline**: Demonstrates how to implement a real-time data ingestion pipeline using Kafka.
+- 🔄 **Hybrid Processing**: Covers both **streaming** (Kafka Consumer) and **batch buffering** (using in-memory Parquet conversion).
+- 📦 **Efficient Storage**: Utilizes `pyarrow` for writing Parquet files efficiently in-memory before uploading to cloud storage.
 
 ## 🌱 Future Enhancements
 
