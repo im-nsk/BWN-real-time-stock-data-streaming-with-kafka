@@ -1,4 +1,8 @@
-# 📈 Real-Time Stock Data Streaming with Kafka
+# 📈 Real-Time Stock Data Streaming with Kafka & AWS Cloud
+
+> This is part of the **BWN Project Series — Build With Nishant**, where I build real-world data engineering projects from scratch and share insight step-by-step.
+
+---
 
 ## 🚀 Project Overview
 
@@ -26,12 +30,39 @@ This diagram illustrates the end-to-end flow of the real-time stock data process
   - `pandas`
   - `pyarrow`
 
+    
+ ---
+ 
+## 📦 Libraries Used
+
+Below are the key libraries and packages used in this project:
+
+| Library            | Purpose                                                                 |
+|--------------------|-------------------------------------------------------------------------|
+| `kafka-python`     | To produce and consume messages from Kafka topics                      |
+| `requests`         | (Optional) For making HTTP requests if needed for APIs or services      |
+| `boto3`            | To interact with AWS services like S3                                   |
+| `pandas`           | For efficient data manipulation and transformation                      |
+| `pyarrow`          | For handling columnar data and Parquet file format                      |
+| `pyarrow.parquet`  | To read/write Parquet files                                             |
+| `json`             | For working with JSON data structures                                   |
+| `time`             | To manage timestamps and delays                                         |
+| `io`               | For working with in-memory byte streams (e.g., `BytesIO`)              |
+| `utils.config_loader` | Custom module to load project-specific configurations (YAML/JSON)    |
+
+---
+
+📌 *This project is part of the `BWN` (Build With NSK) series — where I build real-world Data Engineering projects from scratch to production-ready systems.*
+
+
 ---
 
 ## 📦 Project Structure
 
 ```
 01-stock-data-streaming-kafka/
+architecture/
+│   └── real-time-stock-data-streaming-using-kafka.png
 scripts/
 │   └── producer.py                  # Streams stock data to Kafka
 │   └── consumer.py                  # Consumes Kafka messages and writes to S3
