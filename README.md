@@ -6,6 +6,14 @@ This project simulates **real-time stock price data streaming** using **Apache K
 
 ---
 
+## 🔧 System Architecture
+
+![Architecture Diagram](./architecture/real-time-stock-data-streaming-using-kafka.png)
+
+This diagram illustrates the end-to-end flow of the real-time stock data processing pipeline.
+
+---
+
 ## 🧰 Tech Stack
 
 - **Language:** Python
