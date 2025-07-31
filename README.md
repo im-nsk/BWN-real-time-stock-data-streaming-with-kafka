@@ -1,4 +1,4 @@
-# 📈 Stock Data Streaming with Kafka & S3 (Local Setup)
+# 📈 Real-Time Stock Data Streaming with Kafka
 
 ## 🚀 Project Overview
 
