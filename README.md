@@ -1,4 +1,4 @@
-# 📈 Real-Time Stock Data Streaming with Kafka & AWS Cloud
+# 📈 Real-Time Stock Data Streaming with Kafka + AWS Cloud + Python
 
 > 📌 This is part of the **BWN Project Series — Build With Nishant**, where I build real-world data engineering projects from scratch and share insight step-by-step.
 
