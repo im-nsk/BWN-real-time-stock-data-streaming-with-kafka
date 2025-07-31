@@ -187,3 +187,14 @@ This project is designed to give you hands-on, real-world exposure to the core c
 - Integrate with Athena/QuickSight for querying
 
 ---
+
+## 🙌 Connect with Me
+
+If you found this project helpful or you're on a journey to crack Data Engineering roles, let’s connect:
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/im-nsk/)
+- 👥 Join Me: [Topmate](https://lnkd.in/giE3e9yH)
+- 🎯 **Get more interview calls**: (https://lnkd.in/ges-e-7J)
+- 🎤 **Mock Interviews**: (https://lnkd.in/g8Pqypt5)
+- 📚 **Interview Prep Guidance**: [Mentorship Sessions](https://lnkd.in/gUEVYCGy)
+
